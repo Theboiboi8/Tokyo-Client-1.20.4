@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "tokyo-client",
+  "version": "${version}",
+  "name": "Tokyo Client",
+  "description": "With my Tokyo girls, sippin' Tokyo tea.",
+  "authors": [
+    "Crosby"
+  ],
+  "contact": {
+    "repo": "https://github.com/RacoonDog/Tokyo-Client",
+    "sources": "https://github.com/RacoonDog/Tokyo-Client",
+    "issues": "https://github.com/RacoonDog/Tokyo-Client/issues",
+    "discord": "https://discord.gg/4RBmBCFSTc"
+  },
+  "license": "ARR",
+  "icon": "assets/tokyo-client/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "meteor": [
+      "io.github.racoondog.tokyo.Tokyo"
+    ],
+    "argsListener": [
+      "io.github.racoondog.tokyo.LaunchHandler"
+    ]
+  },
+  "mixins": [
+    "tokyo-client.mixins.json"
+  ],
+  "accessWidener": "tokyo-client.accesswidener",
+  "custom": {
+    "meteor-client:color": "204,48,255",
+    "modmenu": {
+      "badges": [ "meteor" ]
+    }
+  },
+  "depends": {
+    "java": ">=17",
+    "fabricloader": ">=0.12",
+    "minecraft": ">=${mc_version}",
+    "meteor-client": "*"
+  }
+}
